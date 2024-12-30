@@ -8,4 +8,8 @@ spring:
     password: 1234
     driver-class-name: com.mysql.cj.jdbc.Driver
 
+  jpa:
+    hibernate:
+      ddl-auto: update #테이블 자동 생성 및 업데이트
+
 
