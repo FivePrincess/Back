@@ -1,6 +1,6 @@
 package com.example.guzip.repository;
 
-import com.example.guzip.entity.Employer;
+import com.example.guzip.entity.user.Employer;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface EmployerRepository extends JpaRepository<Employer, Long> {

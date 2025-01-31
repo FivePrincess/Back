@@ -1,27 +1,10 @@
 package com.example.guzip.service;
 
-import com.example.guzip.dto.EmployerInfoResponse;
-import com.example.guzip.entity.Employer;
-import com.example.guzip.repository.EmployerRepository;
-import org.springframework.stereotype.Service;
+import com.example.guzip.dto.EmployeeInfoResponseDto;
+import com.example.guzip.dto.EmployerInfoResponseDto;
 
-@Service
-public class EmployerService {
+public interface EmployerService {
 
-    private EmployerRepository employerRepository;
-
-    public EmployerService(EmployerRepository employerRepository) {
-        this.employerRepository = employerRepository;
-    }
-
-    public EmployerInfoResponse getEmployerInfo(Long EmployerId) {
-        Employer employer = employerRepository.findById(EmployerId)
-                .orElseThrow(()-> new IllegalArgumentException("Employer not found with ID: " + EmployerId));
-
-        return new EmployerInfoResponse(
-                employer.getEmployerName(),
-                employer.getEmployerPhoneNumber()
-        );
-    }
+    public EmployerInfoResponseDto getEmployerInfo(Long EmployeeId);
 
 }

@@ -2,7 +2,7 @@ package com.example.guzip.dto;
 
 import java.util.List;
 
-public record GuesthouseRequest(
+public record GuesthouseRequestDto(
         String guesthouseName,
         String location,
         String facilities,

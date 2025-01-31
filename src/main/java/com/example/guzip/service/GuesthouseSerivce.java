@@ -1,8 +1,8 @@
 package com.example.guzip.service;
 
-import com.example.guzip.dto.GuesthouseRequest;
-import com.example.guzip.entity.Employer;
-import com.example.guzip.entity.Guesthouse;
+import com.example.guzip.dto.GuesthouseRequestDto;
+import com.example.guzip.entity.guesthouse.GuestHouse;
+import com.example.guzip.entity.user.Employer;
 import com.example.guzip.repository.EmployerRepository;
 import com.example.guzip.repository.GuesthouseRepository;
 import org.springframework.stereotype.Service;
@@ -18,23 +18,21 @@ public class GuesthouseSerivce {
         this.employerRepository = employerRepository;
     }
 
-    public Guesthouse registerGuestHouse(Long employerId, GuesthouseRequest guesthouseRequest) {
+    public GuestHouse registerGuestHouse(Long employerId, GuesthouseRequestDto guesthouseRequest) {
 
         //Employer 조회
         Employer employer = employerRepository.findById(employerId)
                 .orElseThrow(() -> new IllegalArgumentException("employer not found"));
 
-        Guesthouse guesthouse = new Guesthouse();
+        GuestHouse guesthouse = new GuestHouse();
 
         guesthouse.setGuesthouseName(guesthouseRequest.guesthouseName());
         guesthouse.setLocation(guesthouseRequest.location());
-        guesthouse.setFacilities(guesthouseRequest.facilities());
         guesthouse.setContact(guesthouseRequest.contact());
         guesthouse.setIntro(guesthouseRequest.intro());
         guesthouse.setAverageRating(guesthouseRequest.averageRating());
-        guesthouse.setHashtag(guesthouseRequest.hashtag());
-        guesthouse.setImage(guesthouseRequest.image());
         guesthouse.setEmployer(employer); // 연관된 Employer 설정
+        //이미지랑 해시태크 추가 구현은 따로 해야함
 
         // Guesthouse 저장
         return guesthouseRepository.save(guesthouse);

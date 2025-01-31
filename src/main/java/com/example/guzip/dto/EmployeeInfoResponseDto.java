@@ -1,9 +1,6 @@
 package com.example.guzip.dto;
 
-public record EmployeeInfoResponse(
-        String employeeName,
-        int age,
-        String profile,
+public record EmployeeInfoResponseDto(
         String mbti,
         String instagram,
         String hashtag
