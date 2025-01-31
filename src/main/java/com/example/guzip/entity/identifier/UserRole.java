@@ -1,4 +1,4 @@
-package com.example.guzip.entity;
+package com.example.guzip.entity.identifier;
 
 public enum UserRole {
 
