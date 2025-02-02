@@ -2,7 +2,7 @@ FROM gradle:8.3-jdk17 AS builder
 
 WORKDIR /app
 
-COPY build.gradle setting.grdle ./
+COPY build.gradle setting.gradle ./
 COPY gradle gradle
 
 RUN gradle build --no-daemon -x test || return 0
