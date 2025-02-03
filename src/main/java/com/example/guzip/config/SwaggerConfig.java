@@ -1,5 +1,5 @@
 package com.example.guzip.config;
-
+import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
 import org.springframework.context.annotation.Bean;
@@ -16,5 +16,7 @@ public class SwaggerConfig {
                         .version("1.0.0")
                         .description("Spring Boot JWT 기반 인증 API 문서"));
 
+
+                .components(new Components())
     }
 }
