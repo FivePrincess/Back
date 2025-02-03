@@ -29,6 +29,9 @@ public class User {
     @Column(length = 255)
     private String password; // Consider hashing this!
 
+    @Column(nullable = false, length = 255)
+    private String email;
+
     @Column(columnDefinition = "TEXT")
     private String profile;
 
@@ -44,9 +47,6 @@ public class User {
 
     @Column(length = 13)
     private String number;
-
-    @Column(nullable = false, length = 255)
-    private String email;
 
     @Column(nullable = false)
     private LocalDateTime createdDate;
