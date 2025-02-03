@@ -13,3 +13,5 @@ spring:
       ddl-auto: update #테이블 자동 생성 및 업데이트
 
 
+  jwt:
+    secret: guzip_secret_key_slkdfjaiwefskdflskjdiwejfsldkjfwied
