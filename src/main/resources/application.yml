@@ -15,7 +15,7 @@ spring:
     init:
       mode: always
   jwt:
-    secret: guzip_secret_key_slkdfjaiwefskdflskjdiwejfsldkjfwied
+    secret: ${JWT_SECRET_KEY}
 
 server:
 #  port: ${PORT}
