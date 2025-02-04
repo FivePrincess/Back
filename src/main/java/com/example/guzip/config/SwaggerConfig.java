@@ -1,5 +1,4 @@
 package com.example.guzip.config;
-
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -12,14 +11,12 @@ public class SwaggerConfig {
     @Bean
     public OpenAPI openAPI() {
         return new OpenAPI()
-                .components(new Components())
-                .info(apiInfo());
-    }
+                .info(new Info()
+                        .title("Guzip API 문서")
+                        .version("1.0.0")
+                        .description("Spring Boot JWT 기반 인증 API 문서"));
 
-    private Info apiInfo() {
-        return new Info()
-                .title("Springdoc")
-                .description("Guzip Swagger UI")
-                .version("1.0.0");
+
+                .components(new Components())
     }
 }

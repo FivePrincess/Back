@@ -17,8 +17,12 @@ spring:
 
 server:
   port: ${PORT}
+  
+  jwt:
+    secret: guzip_secret_key_slkdfjaiwefskdflskjdiwejfsldkjfwied
 
 logging:
   level:
     root: info
     org.springframework.web: debug
+

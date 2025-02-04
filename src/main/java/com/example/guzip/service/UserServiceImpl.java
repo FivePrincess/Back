@@ -59,6 +59,7 @@ public class UserServiceImpl implements UserService {
         //4. 역할에 따라 Employer 또는 Employee 생성
         if("EMPLOYER".equals(role)){
             user.setRole(UserRole.EMPLOYER);
+            userRepository.flush();
             userRepository.save(user);
 
             Employer employer = new Employer();
@@ -71,6 +72,7 @@ public class UserServiceImpl implements UserService {
         }
         else if("EMPLOYEE".equals(role)){
             user.setRole(UserRole.EMPLOYEE);
+            userRepository.flush();
             userRepository.save(user);
 
             Employee employee = new Employee();
