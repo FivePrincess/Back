@@ -1,12 +1,6 @@
 package com.example.guzip.dto;
 
-import com.example.guzip.entity.guesthouse.GuestHouse;
-import com.example.guzip.entity.liked.LikedGuesthouse;
-import com.example.guzip.service.GuesthouseServiceImpl;
-
-import java.util.List;
-import java.util.Optional;
-import java.util.stream.Collectors;
+import com.example.guzip.entity.liked.LikedGuestHouse;
 
 public record GuesthouseResponseDto (
      Long id,

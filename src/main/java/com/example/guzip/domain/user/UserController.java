@@ -1,10 +1,6 @@
-package com.example.guzip.controller;
+package com.example.guzip.domain.user;
 
-import com.example.guzip.dto.EmployerInfoResponseDto;
 import com.example.guzip.dto.UserInfoResponseDto;
-import com.example.guzip.entity.user.User;
-import com.example.guzip.service.EmployerService;
-import com.example.guzip.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

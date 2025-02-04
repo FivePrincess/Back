@@ -1,4 +1,4 @@
-package com.example.guzip.repository;
+package com.example.guzip.domain.employee;
 
 import com.example.guzip.entity.user.Employee;
 import com.example.guzip.entity.user.User;
@@ -23,4 +23,6 @@ public interface EmployeeRepository extends JpaRepository<Employee, Long> {
      * @return Employee 정보(Optional)
      */
     Optional<Employee> findByUser(User user);
+
+    Employee findByUserUserId(Long userId);
 }

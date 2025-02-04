@@ -1,15 +1,13 @@
-package com.example.guzip.service;
+package com.example.guzip.domain.user;
 
-import com.example.guzip.dto.EmployeeInfoResponseDto;
 import com.example.guzip.dto.SignUpRequestDTO;
 import com.example.guzip.dto.UserInfoResponseDto;
 import com.example.guzip.entity.identifier.UserRole;
 import com.example.guzip.entity.user.Employee;
 import com.example.guzip.entity.user.Employer;
 import com.example.guzip.entity.user.User;
-import com.example.guzip.repository.EmployeeRepository;
-import com.example.guzip.repository.EmployerRepository;
-import com.example.guzip.repository.UserRepository;
+import com.example.guzip.domain.employee.EmployeeRepository;
+import com.example.guzip.domain.employer.EmployerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
