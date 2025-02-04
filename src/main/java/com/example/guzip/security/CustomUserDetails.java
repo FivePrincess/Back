@@ -56,4 +56,13 @@ public class CustomUserDetails implements UserDetails {
     public boolean isEnabled() {
         return true;
     }
+
+    // 🔥 추가: User 엔티티 직접 접근 가능하게 getter 추가
+    public User getUser() {
+        return user;
+    }
+
+    public String getRole() {
+        return role;
+    }
 }
