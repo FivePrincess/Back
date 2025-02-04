@@ -19,7 +19,7 @@ server:
   port: ${PORT}
   
   jwt:
-    secret: guzip_secret_key_slkdfjaiwefskdflskjdiwejfsldkjfwied
+    secret: ${JWT_SECRET_KEY}
 
 logging:
   level:
