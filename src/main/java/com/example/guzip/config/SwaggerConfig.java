@@ -1,4 +1,5 @@
 package com.example.guzip.config;
+
 import io.swagger.v3.oas.models.Components;
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Info;
@@ -14,9 +15,7 @@ public class SwaggerConfig {
                 .info(new Info()
                         .title("Guzip API 문서")
                         .version("1.0.0")
-                        .description("Spring Boot JWT 기반 인증 API 문서"));
-
-
-                .components(new Components())
+                        .description("Spring Boot JWT 기반 인증 API 문서"))
+                .components(new Components()); // <-- 세미콜론 위치 수정
     }
 }
