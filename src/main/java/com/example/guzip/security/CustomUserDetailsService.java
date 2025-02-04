@@ -1,9 +1,9 @@
 package com.example.guzip.security;
 
 import com.example.guzip.entity.user.User;
-import com.example.guzip.repository.EmployeeRepository;
-import com.example.guzip.repository.EmployerRepository;
-import com.example.guzip.repository.UserRepository;
+import com.example.guzip.domain.employee.EmployeeRepository;
+import com.example.guzip.domain.employer.EmployerRepository;
+import com.example.guzip.domain.user.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

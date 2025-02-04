@@ -1,13 +1,15 @@
-package com.example.guzip.service;
+package com.example.guzip.domain.guesthouse;
 
+import com.example.guzip.domain.employee.EmployeeRepository;
+import com.example.guzip.domain.employer.EmployerRepository;
+import com.example.guzip.domain.likedGuesthouse.LikedGuesthouseRepository;
+import com.example.guzip.domain.user.UserRepository;
 import com.example.guzip.dto.GuesthouseRequestDto;
 import com.example.guzip.dto.GuesthouseResponseDto;
 import com.example.guzip.entity.guesthouse.GuestHouse;
-import com.example.guzip.entity.liked.LikedGuesthouse;
+import com.example.guzip.entity.liked.LikedGuestHouse;
 import com.example.guzip.entity.user.Employee;
 import com.example.guzip.entity.user.Employer;
-import com.example.guzip.entity.user.User;
-import com.example.guzip.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -75,7 +77,7 @@ public class GuesthouseServiceImpl implements GuesthouseSerivce{
     public String likeGuesthouse (Long guesthouse_id, Long user_id){
 
         Employee employee = employeeRepository.findByUserUserId(user_id);
-        Optional<LikedGuesthouse> userFavoriteFacility = likedGuesthouseRepository.findByEmployeeEmployeeId(employee.getEmployeeId());
+        Optional<LikedGuestHouse> userFavoriteFacility = likedGuesthouseRepository.findByEmployeeEmployeeId(employee.getEmployeeId());
         String result;
 
         if(userFavoriteFacility.isPresent()){
@@ -83,7 +85,7 @@ public class GuesthouseServiceImpl implements GuesthouseSerivce{
             result = "좋아요 취소 완료";
         }
         else {
-            LikedGuesthouse likedGuesthouse1 = new LikedGuesthouse();
+            LikedGuestHouse likedGuesthouse1 = new LikedGuestHouse();
             GuestHouse guestHouse = guesthouseRepository.findByGuesthouseId(guesthouse_id);
             likedGuesthouse1.setGuestHouse(guestHouse);
             likedGuesthouse1.setEmployee(employee);

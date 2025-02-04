@@ -1,4 +1,4 @@
-package com.example.guzip.service;
+package com.example.guzip.domain.employee;
 
 import com.example.guzip.dto.EmployeeInfoResponseDto;
 

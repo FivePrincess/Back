@@ -1,7 +1,6 @@
-package com.example.guzip.controller;
+package com.example.guzip.domain.employer;
 
 import com.example.guzip.dto.EmployerInfoResponseDto;
-import com.example.guzip.service.EmployerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

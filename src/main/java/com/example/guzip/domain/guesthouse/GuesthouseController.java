@@ -1,8 +1,7 @@
-package com.example.guzip.controller;
+package com.example.guzip.domain.guesthouse;
 
 import com.example.guzip.dto.GuesthouseRequestDto;
 import com.example.guzip.entity.guesthouse.GuestHouse;
-import com.example.guzip.service.GuesthouseSerivce;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

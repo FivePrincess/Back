@@ -1,10 +1,8 @@
-package com.example.guzip.controller;
+package com.example.guzip.security;
 
 import com.example.guzip.dto.LoginRequestDTO;
 import com.example.guzip.dto.SignUpRequestDTO;
-import com.example.guzip.security.CustomUserDetails;
-import com.example.guzip.security.JWTUtil;
-import com.example.guzip.service.UserService;
+import com.example.guzip.domain.user.UserService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

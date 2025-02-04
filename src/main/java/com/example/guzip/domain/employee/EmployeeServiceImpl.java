@@ -1,8 +1,7 @@
-package com.example.guzip.service;
+package com.example.guzip.domain.employee;
 
 import com.example.guzip.dto.EmployeeInfoResponseDto;
 import com.example.guzip.entity.user.Employee;
-import com.example.guzip.repository.EmployeeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

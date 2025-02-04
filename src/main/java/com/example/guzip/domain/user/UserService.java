@@ -1,4 +1,4 @@
-package com.example.guzip.service;
+package com.example.guzip.domain.user;
 
 import com.example.guzip.dto.SignUpRequestDTO;
 import com.example.guzip.dto.UserInfoResponseDto;

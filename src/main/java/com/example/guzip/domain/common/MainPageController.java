@@ -1,10 +1,8 @@
-package com.example.guzip.controller;
+package com.example.guzip.domain.common;
 
 import com.example.guzip.dto.GuesthouseResponseDto;
-import com.example.guzip.dto.UserInfoResponseDto;
-import com.example.guzip.entity.user.User;
-import com.example.guzip.service.GuesthouseSerivce;
-import com.example.guzip.service.UserService;
+import com.example.guzip.domain.guesthouse.GuesthouseSerivce;
+import com.example.guzip.domain.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -40,7 +38,7 @@ public class MainPageController {
 
     @PutMapping("guesthouse/like/{guesthouse_id}")
     public ResponseEntity<?> likeGuesthouse(@PathVariable Long guesthouse_id, Long user_id) {
-        if (userId != null && guesthouse_id != null) {
+        if (user_id != null && guesthouse_id != null) {
             return ResponseEntity.ok(guesthouseSerivce.likeGuesthouse(guesthouse_id, user_id));
         }
         return ResponseEntity.notFound().build();
