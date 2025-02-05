@@ -1,9 +1,9 @@
 package com.example.guzip.domain.employee;
 
-import com.example.guzip.dto.EmployeeInfoResponseDto;
+import com.example.guzip.dto.EmployeeMyPageResponseDTO;
 
 public interface EmployeeService {
 
-    public EmployeeInfoResponseDto getEmployeeInfo(Long EmployeeId);
+    EmployeeMyPageResponseDTO getEmployeeMyPage(Long employeeId);
 
 }
