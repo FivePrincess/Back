@@ -1,6 +1,6 @@
 package com.example.guzip.domain.employee;
 
-import com.example.guzip.dto.EmployeeInfoResponseDto;
+import com.example.guzip.dto.EmployeeMyPageResponseDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,8 +16,8 @@ public class EmployeeController {
     private EmployeeService employeeService;
 
     @GetMapping("/{employee_id}")
-    public ResponseEntity<EmployeeInfoResponseDto> getEmployeeInfo(@PathVariable Long employee_id) {
-        EmployeeInfoResponseDto employeeInfoResponse = employeeService.getEmployeeInfo(employee_id);
-        return ResponseEntity.ok(employeeInfoResponse);
+    public ResponseEntity<EmployeeMyPageResponseDTO> getEmployeeInfo(@PathVariable Long employee_id) {
+        EmployeeMyPageResponseDTO employeeMyPageResponse = employeeService.getEmployeeMyPage(employee_id);
+        return ResponseEntity.ok(employeeMyPageResponse);
     }
 }

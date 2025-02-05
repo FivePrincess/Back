@@ -45,6 +45,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests((auth) ->auth
                         // 인증 필요없는 경로 -> 회원가입 경로, 로그인 경로, Swagger 관련 경로
                         .requestMatchers("/api/auth/signup","/api/auth/login","/swagger-ui/**", "/v3/api-docs/**").permitAll()
+                        .requestMatchers("/api/employee/mypage/**").permitAll()
                         .requestMatchers("/admin").hasRole("ADMIN")
                         .anyRequest().authenticated()); //나머지 경로는 인증이 필요함.
 

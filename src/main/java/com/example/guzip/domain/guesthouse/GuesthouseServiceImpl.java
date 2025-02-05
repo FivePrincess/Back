@@ -2,7 +2,7 @@ package com.example.guzip.domain.guesthouse;
 
 import com.example.guzip.domain.employee.EmployeeRepository;
 import com.example.guzip.domain.employer.EmployerRepository;
-import com.example.guzip.domain.likedGuesthouse.LikedGuesthouseRepository;
+import com.example.guzip.domain.liked.LikedGuesthouseRepository;
 import com.example.guzip.domain.user.UserRepository;
 import com.example.guzip.dto.GuesthouseRequestDto;
 import com.example.guzip.dto.GuesthouseResponseDto;
